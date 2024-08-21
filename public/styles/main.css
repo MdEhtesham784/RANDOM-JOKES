@@ -1,0 +1,62 @@
+:root {
+    --card-height : 65vh;
+    --card-width:calc(var(--card-height)/1.5);
+}
+
+body, html {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+
+}
+
+.jo{
+    width: 90vh;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.nameInput{
+    height: 10vh;
+    display: flex;
+    margin-top: 100 px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.container {
+    background-image: url('../images/joke.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    width: 160vh;
+    height: 70vh;
+    display: flex;
+    margin-top: 100 px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+  }
+
+  #jokeOutput {
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+h1{
+    color: white;
+    font-family: "Titan One", cursive;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes based on your name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+<body>
+    <h1>Write your name 👇</h1>
+    <div class="nameInput">
+    <form id="jokeForm">
+        <div>
+            <input type="text" id="nameInput" placeholder="Enter your name here" required>
+            <button type="submit">Get Joke</button>
+        </div>
+    </form>
+    </div>
+
+    <div class="container">
+       <div class="jo"> <p id="jokeOutput"><%= joke || '' %></p></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('jokeForm');
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const name = document.getElementById('nameInput').value;
+          const response = await fetch(`/joke/${name}`);
+          const joke = await response.text();
+          document.getElementById('jokeOutput').textContent = joke;
+        });
+      </script>
+</body>
+</html>
